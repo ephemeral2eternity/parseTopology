@@ -42,7 +42,9 @@ try:
 						preItem = item.rstrip()
 						itemNum = 1
 					else:
-						pLink = tuple(sorted((preItem, item.rstrip())))
+						# pLink = tuple(sorted((preItem, item.rstrip())))
+						sortedItems = sorted((preItem, item.rstrip()))
+						pLink = sortedItems[0] + "," + sortedItems[1]
 						if pLink not in pLinks:
 							pLinks.append(pLink)
 						preItem = item.rstrip() 
