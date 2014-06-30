@@ -55,7 +55,7 @@ for child in root.findall('AS'):
 	if ("-r" in cmdArgs):
 		for route in child.findall('route'):
 			# print route.get('src'), route.get('dst'),
-			routeFile.write(route.get('src') + "," + route.get('dst') + ",")
+			# routeFile.write(route.get('src') + "," + route.get('dst') + ",")
 			curRt = ""
 			link_ctn_list = route.findall('link_ctn')
 			for i, linkCtn in enumerate(link_ctn_list):
@@ -63,8 +63,9 @@ for child in root.findall('AS'):
 				if i < len(link_ctn_list) - 1:
 					curRt = curRt + ","
 			print "[Route]", route.get('src'), "-->", route.get('dst'), ":", curRt
+			
 			routeList.append(curRt)
-			routeFile.write(curRt + "\n")
+			routeFile.write(route.get('src') + "," + curRt + "," + route.get('dst') + "\n")
 
 		for idx in range(len(routeList)):
 			# print "The number of routes is ", len(routeList)
