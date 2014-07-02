@@ -38,7 +38,7 @@ for host in hosts:
 	# while host in splHosts:
 	# 	splHosts = random.sample(hosts, 10)
 	argu = ET.SubElement(curProc, 'argument')
-	argu.set('value', "hosts.csv")
+	argu.set('value', hostFileName)
 	# for peer in splHosts:
 	# 	curArgu = ET.SubElement(curProc, 'argument')
 	#	curArgu.set('value', peer)
