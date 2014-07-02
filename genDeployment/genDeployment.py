@@ -7,11 +7,11 @@ totalArgs = len(sys.argv)
 cmdArgs = sys.argv
 
 if (totalArgs < 3):
-        print "Usage : python genDeployment.py server.csv clients.csv deployment.xml\n   hosts.csv : the host name file you want to read host names.\n    deployment.xml : the deployment file name you want to generate\n"
+        print "Usage : python genDeployment.py server.csv hosts.csv deployment.xml\n   hosts.csv : the host name file you want to read host names.\n    deployment.xml : the deployment file name you want to generate\n"
         sys.exit()
 
 serverFileName = cmdArgs[1]
-clientFileName = cmdArgs[2]
+hostFileName = cmdArgs[2]
 deploymentFileName = cmdArgs[3]
 
 try:
@@ -23,14 +23,17 @@ except IOError:
 	sys.exit()
 
 try:
-	with open(clientFileName, 'rb') as clientsFile:
-		clients = clientsFile.read().split("\n")
-		print clients
+	with open(hostFileName, 'rb') as hostsFile:
+		hosts = hostsFile.read().split("\n")
+		print hosts
 except IOError:
 	print "Could not read file ", clientFileName, ", please check the availability of the file!"
 	sys.exit()
 
 deploymentFile = open(deploymentFileName, 'w')
+
+while '' in servers:
+	servers.remove('')
 
 while '' in hosts:
 	hosts.remove('')
@@ -39,16 +42,13 @@ while '' in hosts:
 comment = ET.Comment('DOCTYPE deployment SYSTEM "https://github.com/ephemeral2eternity/simgrid_simulations.git"')
 platform = ET.Element('platform')
 platform.set('version', "3")
-for server in servers:
+for host in hosts:
 	curProc = ET.SubElement(platform, 'process')
-	curProc.set('function', "agentMngt.cacheAgent")
-	curProc.set('host', host)
-	argu = ET.SubElement(curProc, 'argument')
-	argu.set('value', serverFileName)
+	if host in servers:
+		curProc.set('function', "agentMngt.cacheAgent")
+	else:
+		curProc.set('function', "agentMngt.clientAgent")
 
-for client in clients:
-	curProc = ET.SubElement(platform, 'process')
-	curProc.set('function', "agentMngt.clientAgent")
 	curProc.set('host', host)
 	argu = ET.SubElement(curProc, 'argument')
 	argu.set('value', serverFileName)
