@@ -1,6 +1,8 @@
 <?xml version='1.0'?>
+
 <!DOCTYPE platform SYSTEM "http://simgrid.gforge.inria.fr/simgrid.dtd">
 
+<?xml version="1.0" ?>
 <platform version="3">
   <AS id="AS_0" routing="Full">
     <AS id="AS_00" routing="Dijsktra">
