@@ -1,0 +1,5 @@
+{
+    "cmd": ["python", "$file", "3", "2", "2"],
+    "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+    "selector": "genPlatform.py"
+}
