@@ -133,8 +133,8 @@ def createAS(n, P):
 		# Creating links to connect serverAS to the router in exitAS
 		bb_server_link = ET.SubElement(P, 'link')
 		bb_server_link.set('id', serverAS_link_prefix + upper_as_num)
-		bb_server_link.set('bandwidth', inner_bb_link_lat)
-		bb_server_link.set('latency', bb_link_lat)
+		bb_server_link.set('bandwidth', bb_link_bw)
+		bb_server_link.set('latency', inner_bb_link_lat)
 
 		# Creating links to connect subASes to the router in exitAS
 		for i in range(d):

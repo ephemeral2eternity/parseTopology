@@ -2,11 +2,11 @@
 <!DOCTYPE platform SYSTEM "http://simgrid.gforge.inria.fr/simgrid.dtd">
 
 <platform version="3">
-  <AS id="AS_0" routing="Full">
+  <AS id="AS_0" routing="Floyd">
     <AS id="exitAS_0" routing="Full">
       <router id="R_0"/>
     </AS>
-    <AS id="AS_00" routing="Full">
+    <AS id="AS_00" routing="Floyd">
       <AS id="exitAS_00" routing="Full">
         <router id="R_00"/>
       </AS>
@@ -104,17 +104,17 @@
       </AS>
       <AS id="serverAS_00" routing="Full">
         <host id="Server_00" power="1000000000"/>
-        <link bandwidth="1000000000" id="ServerAcessLink_00" latency="5E-3"/>
+        <link bandwidth="1000000000" id="ServerAcessLink_00" latency="0.002"/>
         <router id="SRouter_00"/>
         <route dst="Server_00" src="SRouter_00" symmetrical="YES">
           <link_ctn id="ServerAcessLink_00"/>
         </route>
       </AS>
-      <link bandwidth="10000000000" id="BBServer_00" latency="0.1"/>
-      <link bandwidth="10000000000" id="BB_000" latency="0.1"/>
-      <link bandwidth="10000000000" id="BB_001" latency="0.1"/>
-      <link bandwidth="10000000000" id="BB_002" latency="0.1"/>
-      <link bandwidth="10000000000" id="BB_003" latency="0.1"/>
+      <link bandwidth="10000000000" id="BBServer_00" latency="0.001"/>
+      <link bandwidth="10000000000" id="BB_000" latency="0.001"/>
+      <link bandwidth="10000000000" id="BB_001" latency="0.001"/>
+      <link bandwidth="10000000000" id="BB_002" latency="0.001"/>
+      <link bandwidth="10000000000" id="BB_003" latency="0.001"/>
       <ASroute dst="exitAS_00" gw_dst="R_00" gw_src="SRouter_00" src="serverAS_00" symmetrical="YES">
         <link_ctn id="BBServer_00"/>
       </ASroute>
@@ -131,7 +131,7 @@
         <link_ctn id="BB_003"/>
       </ASroute>
     </AS>
-    <AS id="AS_01" routing="Full">
+    <AS id="AS_01" routing="Floyd">
       <AS id="exitAS_01" routing="Full">
         <router id="R_01"/>
       </AS>
@@ -229,17 +229,17 @@
       </AS>
       <AS id="serverAS_01" routing="Full">
         <host id="Server_01" power="1000000000"/>
-        <link bandwidth="1000000000" id="ServerAcessLink_01" latency="5E-3"/>
+        <link bandwidth="1000000000" id="ServerAcessLink_01" latency="0.002"/>
         <router id="SRouter_01"/>
         <route dst="Server_01" src="SRouter_01" symmetrical="YES">
           <link_ctn id="ServerAcessLink_01"/>
         </route>
       </AS>
-      <link bandwidth="10000000000" id="BBServer_01" latency="0.1"/>
-      <link bandwidth="10000000000" id="BB_010" latency="0.1"/>
-      <link bandwidth="10000000000" id="BB_011" latency="0.1"/>
-      <link bandwidth="10000000000" id="BB_012" latency="0.1"/>
-      <link bandwidth="10000000000" id="BB_013" latency="0.1"/>
+      <link bandwidth="10000000000" id="BBServer_01" latency="0.001"/>
+      <link bandwidth="10000000000" id="BB_010" latency="0.001"/>
+      <link bandwidth="10000000000" id="BB_011" latency="0.001"/>
+      <link bandwidth="10000000000" id="BB_012" latency="0.001"/>
+      <link bandwidth="10000000000" id="BB_013" latency="0.001"/>
       <ASroute dst="exitAS_01" gw_dst="R_01" gw_src="SRouter_01" src="serverAS_01" symmetrical="YES">
         <link_ctn id="BBServer_01"/>
       </ASroute>
@@ -256,7 +256,7 @@
         <link_ctn id="BB_013"/>
       </ASroute>
     </AS>
-    <AS id="AS_02" routing="Full">
+    <AS id="AS_02" routing="Floyd">
       <AS id="exitAS_02" routing="Full">
         <router id="R_02"/>
       </AS>
@@ -354,17 +354,17 @@
       </AS>
       <AS id="serverAS_02" routing="Full">
         <host id="Server_02" power="1000000000"/>
-        <link bandwidth="1000000000" id="ServerAcessLink_02" latency="5E-3"/>
+        <link bandwidth="1000000000" id="ServerAcessLink_02" latency="0.002"/>
         <router id="SRouter_02"/>
         <route dst="Server_02" src="SRouter_02" symmetrical="YES">
           <link_ctn id="ServerAcessLink_02"/>
         </route>
       </AS>
-      <link bandwidth="10000000000" id="BBServer_02" latency="0.1"/>
-      <link bandwidth="10000000000" id="BB_020" latency="0.1"/>
-      <link bandwidth="10000000000" id="BB_021" latency="0.1"/>
-      <link bandwidth="10000000000" id="BB_022" latency="0.1"/>
-      <link bandwidth="10000000000" id="BB_023" latency="0.1"/>
+      <link bandwidth="10000000000" id="BBServer_02" latency="0.001"/>
+      <link bandwidth="10000000000" id="BB_020" latency="0.001"/>
+      <link bandwidth="10000000000" id="BB_021" latency="0.001"/>
+      <link bandwidth="10000000000" id="BB_022" latency="0.001"/>
+      <link bandwidth="10000000000" id="BB_023" latency="0.001"/>
       <ASroute dst="exitAS_02" gw_dst="R_02" gw_src="SRouter_02" src="serverAS_02" symmetrical="YES">
         <link_ctn id="BBServer_02"/>
       </ASroute>
@@ -381,7 +381,7 @@
         <link_ctn id="BB_023"/>
       </ASroute>
     </AS>
-    <AS id="AS_03" routing="Full">
+    <AS id="AS_03" routing="Floyd">
       <AS id="exitAS_03" routing="Full">
         <router id="R_03"/>
       </AS>
@@ -479,17 +479,17 @@
       </AS>
       <AS id="serverAS_03" routing="Full">
         <host id="Server_03" power="1000000000"/>
-        <link bandwidth="1000000000" id="ServerAcessLink_03" latency="5E-3"/>
+        <link bandwidth="1000000000" id="ServerAcessLink_03" latency="0.002"/>
         <router id="SRouter_03"/>
         <route dst="Server_03" src="SRouter_03" symmetrical="YES">
           <link_ctn id="ServerAcessLink_03"/>
         </route>
       </AS>
-      <link bandwidth="10000000000" id="BBServer_03" latency="0.1"/>
-      <link bandwidth="10000000000" id="BB_030" latency="0.1"/>
-      <link bandwidth="10000000000" id="BB_031" latency="0.1"/>
-      <link bandwidth="10000000000" id="BB_032" latency="0.1"/>
-      <link bandwidth="10000000000" id="BB_033" latency="0.1"/>
+      <link bandwidth="10000000000" id="BBServer_03" latency="0.001"/>
+      <link bandwidth="10000000000" id="BB_030" latency="0.001"/>
+      <link bandwidth="10000000000" id="BB_031" latency="0.001"/>
+      <link bandwidth="10000000000" id="BB_032" latency="0.001"/>
+      <link bandwidth="10000000000" id="BB_033" latency="0.001"/>
       <ASroute dst="exitAS_03" gw_dst="R_03" gw_src="SRouter_03" src="serverAS_03" symmetrical="YES">
         <link_ctn id="BBServer_03"/>
       </ASroute>
@@ -508,17 +508,17 @@
     </AS>
     <AS id="serverAS_0" routing="Full">
       <host id="Server_0" power="1000000000"/>
-      <link bandwidth="1000000000" id="ServerAcessLink_0" latency="5E-3"/>
+      <link bandwidth="1000000000" id="ServerAcessLink_0" latency="0.002"/>
       <router id="SRouter_0"/>
       <route dst="Server_0" src="SRouter_0" symmetrical="YES">
         <link_ctn id="ServerAcessLink_0"/>
       </route>
     </AS>
-    <link bandwidth="10000000000" id="BBServer_0" latency="0.1"/>
-    <link bandwidth="10000000000" id="BB_00" latency="0.1"/>
-    <link bandwidth="10000000000" id="BB_01" latency="0.1"/>
-    <link bandwidth="10000000000" id="BB_02" latency="0.1"/>
-    <link bandwidth="10000000000" id="BB_03" latency="0.1"/>
+    <link bandwidth="10000000000" id="BBServer_0" latency="0.001"/>
+    <link bandwidth="10000000000" id="BB_00" latency="0.05"/>
+    <link bandwidth="10000000000" id="BB_01" latency="0.05"/>
+    <link bandwidth="10000000000" id="BB_02" latency="0.05"/>
+    <link bandwidth="10000000000" id="BB_03" latency="0.05"/>
     <ASroute dst="exitAS_0" gw_dst="R_0" gw_src="SRouter_0" src="serverAS_0" symmetrical="YES">
       <link_ctn id="BBServer_0"/>
     </ASroute>
