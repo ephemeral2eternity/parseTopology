@@ -1,0 +1,36 @@
+<?xml version='1.0'?>
+
+<!DOCTYPE platform SYSTEM "http://simgrid.gforge.inria.fr/simgrid.dtd">
+
+<?xml version="1.0" ?>
+<platform version="3">
+  <AS id="AS_0" routing="Full">
+    <router id="CenterRouter_AS_0"/>
+    <router id="Gateway_AS_0"/>
+    <host id="C_AS_00" power="1000000000"/>
+    <host id="C_AS_01" power="1000000000"/>
+    <host id="C_AS_02" power="1000000000"/>
+    <host id="C_AS_03" power="1000000000"/>
+    <link bandwidth="10000000" id="Link_AS_00" latency="5E-4"/>
+    <link bandwidth="10000000" id="Link_AS_01" latency="5E-4"/>
+    <link bandwidth="10000000" id="Link_AS_02" latency="5E-4"/>
+    <link bandwidth="10000000" id="Link_AS_03" latency="5E-4"/>
+    <link bandwidth="10000000000" id="Backbone_AS_0" latency="0.1"/>
+    <route dst="C_AS_00" src="CenterRouter_AS_0">
+      <link_ctn id="Link_AS_00"/>
+    </route>
+    <route dst="C_AS_01" src="CenterRouter_AS_0">
+      <link_ctn id="Link_AS_01"/>
+    </route>
+    <route dst="C_AS_02" src="CenterRouter_AS_0">
+      <link_ctn id="Link_AS_02"/>
+    </route>
+    <route dst="C_AS_03" src="CenterRouter_AS_0">
+      <link_ctn id="Link_AS_03"/>
+    </route>
+    <route dst="Gateway_AS_0" src="CenterRouter_AS_0">
+      <link_ctn id="Backbone_AS_0"/>
+    </route>
+  </AS>
+</platform>
+

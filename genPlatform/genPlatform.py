@@ -36,9 +36,10 @@ power = "1000000000"
 c_link_bw = "10000000"
 c_link_lat = "5E-4"
 s_link_bw = "1000000000"
-s_link_lat = "5E-3"
+s_link_lat = "0.002"
 bb_link_bw = "10000000000"
-bb_link_lat = "0.1"
+inner_bb_link_lat = "0.001"
+bb_link_lat = "0.05"
 
 # Printing preamble
 print "<?xml version='1.0'?>\n";
@@ -91,7 +92,7 @@ def createAS(n, P):
 		upper_as_num = items[-1]
 
 		# Setting current AS as Full routing since it is not leaf AS.
-		P.set('routing', "Full")
+		P.set('routing', "Floyd")
 
 		# Creating Exit AS for this AS
 		exitP = ET.SubElement(P, 'AS')
@@ -132,7 +133,7 @@ def createAS(n, P):
 		# Creating links to connect serverAS to the router in exitAS
 		bb_server_link = ET.SubElement(P, 'link')
 		bb_server_link.set('id', serverAS_link_prefix + upper_as_num)
-		bb_server_link.set('bandwidth', bb_link_bw)
+		bb_server_link.set('bandwidth', inner_bb_link_lat)
 		bb_server_link.set('latency', bb_link_lat)
 
 		# Creating links to connect subASes to the router in exitAS
@@ -141,7 +142,10 @@ def createAS(n, P):
 			bb_AS_link = ET.SubElement(P, 'link')
 			bb_AS_link.set('id', bb_link_prefix + as_num)
 			bb_AS_link.set('bandwidth', bb_link_bw)
-			bb_AS_link.set('latency', bb_link_lat)
+			if n == 1:
+				bb_AS_link.set('latency', inner_bb_link_lat)
+			else:
+				bb_AS_link.set('latency', bb_link_lat)
 
 		# Creating routes to connect to serverAS
 		serverAS_route = ET.SubElement(P, 'ASroute')
