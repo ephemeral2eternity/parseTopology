@@ -103,7 +103,7 @@ if ("-l" in cmdArgs):
 
 if ("-r" in cmdArgs):
 	routeFile.close()
-	switchFile.close()
+	routerFile.close()
 
 if ("-g" in cmdArgs):
 	graphFile.close()

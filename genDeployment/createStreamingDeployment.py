@@ -18,7 +18,7 @@ deploymentFileName = cmdArgs[3]
 try:
 	with open(serverFileName, 'rb') as serversFile:
 		servers = serversFile.read().split("\n")
-		print servers
+		# print servers
 except IOError:
 	print "Could not read file ", serverFileName, ", please check the availability of the file!"
 	sys.exit()
@@ -26,7 +26,7 @@ except IOError:
 try:
 	with open(clientFileName, 'rb') as clientsFile:
 		clients = clientsFile.read().split("\n")
-		print clients
+		# print clients
 except IOError:
 	print "Could not read file ", clientFileName, ", please check the availability of the file!"
 	sys.exit()
@@ -39,6 +39,9 @@ while '' in servers:
 while '' in clients:
 	clients.remove('')
 
+print servers
+print clients
+
 #  Generate the deployment.xml file for all hosts
 # Printing preamble
 deploymentFile.write("<?xml version='1.0'?>\n")
@@ -50,6 +53,10 @@ for server in servers:
 	curProc = ET.SubElement(platform, 'process')
 	curProc.set('function', "agentMngt.cacheAgent")
 	curProc.set('host', server)
+	for otherServer in servers:
+		if otherServer != server:
+			argu = ET.SubElement(curProc, 'argument')
+			argu.set('value', otherServer)
 
 def common_prefix(a,b):
 	i = 0
@@ -79,6 +86,24 @@ def getCacheAgent(client, serverList):
 
 	return cacheAgent
 		
+def getRootServers(client, serverList):
+	rootServers = []
+	client_num = client.split("_")[-1]
+	match_digit = 0;
+	if not serverList:
+		print "ServerList is empty, exit the program!"
+		sys.exit()
+	for server in serverList:
+		server_num = server.split("_")[-1]
+		match_prefix = common_prefix(client_num, server_num)
+		match_digit = len(match_prefix)
+		server_digit = len(server_num)
+		if server_digit == match_digit:
+			rootServers.append(server)
+
+	return rootServers
+
+candidateNum = 5
 for client in clients:
 	clientProc = ET.SubElement(platform, 'process')
 	clientProc.set('function', "agentMngt.clientAgent")
@@ -92,9 +117,31 @@ for client in clients:
 	argu = ET.SubElement(clientProc, 'argument')
 	argu.set('value', cacheAgent)
 
-	for candidate in candidateServers:
+	rootServers = getRootServers(client, candidateServers)
+
+	print rootServers
+
+	for rootSrv in rootServers:
+		candidateServers.remove(rootSrv)
 		argu = ET.SubElement(clientProc, 'argument')
-		argu.set('value', candidate)
+		argu.set('value', rootSrv)
+
+	leftNum = candidateNum - len(rootServers) - 1
+	availNum = len(candidateServers);
+
+	if leftNum < availNum:
+		for i in range(leftNum):
+			selectedID = random.randint(0,availNum-1)
+			selectedServer = candidateServers[selectedID]
+			candidateServers.remove(selectedServer)
+			argu = ET.SubElement(clientProc, 'argument')
+			argu.set('value', selectedServer)
+			availNum = len(candidateServers)
+	else:
+		for candidate in candidateServers:
+			argu = ET.SubElement(clientProc, 'argument')
+			argu.set('value', candidate)
+
 # print ET.tostring(comment)
-print prettify(platform)
+# print prettify(platform)
 deploymentFile.write(prettify(platform))

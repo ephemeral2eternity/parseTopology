@@ -33,13 +33,16 @@ serverAS_link_prefix = "BBServer_"
 bb_link_prefix = "BB_"
 
 power = "1000000000"
+s_power = "10000000000"
 c_link_bw = "10000000"
 c_link_lat = "5E-4"
+# c_link_lat = "0.01"
 s_link_bw = "100000000"
 s_link_lat = "0.002"
-bb_link_bw = "1000000000"
+bb_link_bw = "10000000000"
 inner_bb_link_lat = "0.001"
-bb_link_lat = "0.05"
+# bb_link_lat = "0.01"
+bb_link_lat = "1E-5"
 
 # Printing preamble
 print "<?xml version='1.0'?>\n";
