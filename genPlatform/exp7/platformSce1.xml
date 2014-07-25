@@ -1346,7 +1346,7 @@
           <link_ctn id="ServerAcessLink_00"/>
         </route>
       </AS>
-      <link bandwidth="1E9" id="BBServer_00"/>
+      <link bandwidth="8E8" id="BBServer_00"/>
       <link bandwidth="1E9" id="BB_000"/>
       <link bandwidth="1E9" id="BB_001"/>
       <link bandwidth="1E9" id="BB_002"/>
@@ -2755,7 +2755,7 @@
           <link_ctn id="ServerAcessLink_01"/>
         </route>
       </AS>
-      <link bandwidth="1E9" id="BBServer_01"/>
+      <link bandwidth="8E8" id="BBServer_01"/>
       <link bandwidth="1E9" id="BB_010"/>
       <link bandwidth="1E9" id="BB_011"/>
       <link bandwidth="1E9" id="BB_012"/>
@@ -4164,7 +4164,7 @@
           <link_ctn id="ServerAcessLink_02"/>
         </route>
       </AS>
-      <link bandwidth="1E9" id="BBServer_02"/>
+      <link bandwidth="8E8" id="BBServer_02"/>
       <link bandwidth="1E9" id="BB_020"/>
       <link bandwidth="1E9" id="BB_021"/>
       <link bandwidth="1E9" id="BB_022"/>
@@ -5573,7 +5573,7 @@
           <link_ctn id="ServerAcessLink_03"/>
         </route>
       </AS>
-      <link bandwidth="1E9" id="BBServer_03"/>
+      <link bandwidth="8E8" id="BBServer_03"/>
       <link bandwidth="1E9" id="BB_030"/>
       <link bandwidth="1E9" id="BB_031"/>
       <link bandwidth="1E9" id="BB_032"/>
@@ -6982,7 +6982,7 @@
           <link_ctn id="ServerAcessLink_04"/>
         </route>
       </AS>
-      <link bandwidth="1E9" id="BBServer_04"/>
+      <link bandwidth="8E8" id="BBServer_04"/>
       <link bandwidth="1E9" id="BB_040"/>
       <link bandwidth="1E9" id="BB_041"/>
       <link bandwidth="1E9" id="BB_042"/>
@@ -8391,7 +8391,7 @@
           <link_ctn id="ServerAcessLink_05"/>
         </route>
       </AS>
-      <link bandwidth="1E9" id="BBServer_05"/>
+      <link bandwidth="8E8" id="BBServer_05"/>
       <link bandwidth="1E9" id="BB_050"/>
       <link bandwidth="1E9" id="BB_051"/>
       <link bandwidth="1E9" id="BB_052"/>
@@ -9800,7 +9800,7 @@
           <link_ctn id="ServerAcessLink_06"/>
         </route>
       </AS>
-      <link bandwidth="1E9" id="BBServer_06"/>
+      <link bandwidth="8E8" id="BBServer_06"/>
       <link bandwidth="1E9" id="BB_060"/>
       <link bandwidth="1E9" id="BB_061"/>
       <link bandwidth="1E9" id="BB_062"/>
@@ -11209,7 +11209,7 @@
           <link_ctn id="ServerAcessLink_07"/>
         </route>
       </AS>
-      <link bandwidth="1E9" id="BBServer_07"/>
+      <link bandwidth="8E8" id="BBServer_07"/>
       <link bandwidth="1E9" id="BB_070"/>
       <link bandwidth="1E9" id="BB_071"/>
       <link bandwidth="1E9" id="BB_072"/>
@@ -12618,7 +12618,7 @@
           <link_ctn id="ServerAcessLink_08"/>
         </route>
       </AS>
-      <link bandwidth="1E9" id="BBServer_08"/>
+      <link bandwidth="8E8" id="BBServer_08"/>
       <link bandwidth="1E9" id="BB_080"/>
       <link bandwidth="1E9" id="BB_081"/>
       <link bandwidth="1E9" id="BB_082"/>
@@ -14027,7 +14027,7 @@
           <link_ctn id="ServerAcessLink_09"/>
         </route>
       </AS>
-      <link bandwidth="1E9" id="BBServer_09"/>
+      <link bandwidth="8E8" id="BBServer_09"/>
       <link bandwidth="1E9" id="BB_090"/>
       <link bandwidth="1E9" id="BB_091"/>
       <link bandwidth="1E9" id="BB_092"/>
@@ -15436,7 +15436,7 @@
           <link_ctn id="ServerAcessLink_0A"/>
         </route>
       </AS>
-      <link bandwidth="1E9" id="BBServer_0A"/>
+      <link bandwidth="8E8" id="BBServer_0A"/>
       <link bandwidth="1E9" id="BB_0A0"/>
       <link bandwidth="1E9" id="BB_0A1"/>
       <link bandwidth="1E9" id="BB_0A2"/>
@@ -16845,7 +16845,7 @@
           <link_ctn id="ServerAcessLink_0B"/>
         </route>
       </AS>
-      <link bandwidth="1E9" id="BBServer_0B"/>
+      <link bandwidth="8E8" id="BBServer_0B"/>
       <link bandwidth="1E9" id="BB_0B0"/>
       <link bandwidth="1E9" id="BB_0B1"/>
       <link bandwidth="1E9" id="BB_0B2"/>
@@ -18254,7 +18254,7 @@
           <link_ctn id="ServerAcessLink_0C"/>
         </route>
       </AS>
-      <link bandwidth="1E9" id="BBServer_0C"/>
+      <link bandwidth="8E8" id="BBServer_0C"/>
       <link bandwidth="1E9" id="BB_0C0"/>
       <link bandwidth="1E9" id="BB_0C1"/>
       <link bandwidth="1E9" id="BB_0C2"/>
@@ -19663,7 +19663,7 @@
           <link_ctn id="ServerAcessLink_0D"/>
         </route>
       </AS>
-      <link bandwidth="1E9" id="BBServer_0D"/>
+      <link bandwidth="8E8" id="BBServer_0D"/>
       <link bandwidth="1E9" id="BB_0D0"/>
       <link bandwidth="1E9" id="BB_0D1"/>
       <link bandwidth="1E9" id="BB_0D2"/>
@@ -21072,7 +21072,7 @@
           <link_ctn id="ServerAcessLink_0E"/>
         </route>
       </AS>
-      <link bandwidth="1E9" id="BBServer_0E"/>
+      <link bandwidth="8E8" id="BBServer_0E"/>
       <link bandwidth="1E9" id="BB_0E0"/>
       <link bandwidth="1E9" id="BB_0E1"/>
       <link bandwidth="1E9" id="BB_0E2"/>
@@ -22481,7 +22481,7 @@
           <link_ctn id="ServerAcessLink_0F"/>
         </route>
       </AS>
-      <link bandwidth="1E9" id="BBServer_0F"/>
+      <link bandwidth="8E8" id="BBServer_0F"/>
       <link bandwidth="1E9" id="BB_0F0"/>
       <link bandwidth="1E9" id="BB_0F1"/>
       <link bandwidth="1E9" id="BB_0F2"/>
@@ -22558,23 +22558,23 @@
         <link_ctn id="ServerAcessLink_0"/>
       </route>
     </AS>
-    <link bandwidth="1E9" id="BBServer_0"/>
-    <link bandwidth="1E9" id="BB_00"/>
-    <link bandwidth="1E9" id="BB_01"/>
-    <link bandwidth="1E9" id="BB_02"/>
-    <link bandwidth="1E9" id="BB_03"/>
-    <link bandwidth="1E9" id="BB_04"/>
-    <link bandwidth="1E9" id="BB_05"/>
-    <link bandwidth="1E9" id="BB_06"/>
-    <link bandwidth="1E9" id="BB_07"/>
-    <link bandwidth="1E9" id="BB_08"/>
-    <link bandwidth="1E9" id="BB_09"/>
-    <link bandwidth="1E9" id="BB_0A"/>
-    <link bandwidth="1E9" id="BB_0B"/>
-    <link bandwidth="1E9" id="BB_0C"/>
-    <link bandwidth="1E9" id="BB_0D"/>
-    <link bandwidth="1E9" id="BB_0E"/>
-    <link bandwidth="1E9" id="BB_0F"/>
+    <link bandwidth="8E8" id="BBServer_0"/>
+    <link bandwidth="8E8" id="BB_00"/>
+    <link bandwidth="8E8" id="BB_01"/>
+    <link bandwidth="8E8" id="BB_02"/>
+    <link bandwidth="8E8" id="BB_03"/>
+    <link bandwidth="8E8" id="BB_04"/>
+    <link bandwidth="8E8" id="BB_05"/>
+    <link bandwidth="8E8" id="BB_06"/>
+    <link bandwidth="8E8" id="BB_07"/>
+    <link bandwidth="8E8" id="BB_08"/>
+    <link bandwidth="8E8" id="BB_09"/>
+    <link bandwidth="8E8" id="BB_0A"/>
+    <link bandwidth="8E8" id="BB_0B"/>
+    <link bandwidth="8E8" id="BB_0C"/>
+    <link bandwidth="8E8" id="BB_0D"/>
+    <link bandwidth="8E8" id="BB_0E"/>
+    <link bandwidth="8E8" id="BB_0F"/>
     <ASroute dst="exitAS_0" gw_dst="R_0" gw_src="SRouter_0" src="serverAS_0" symmetrical="YES">
       <link_ctn id="BBServer_0"/>
     </ASroute>
