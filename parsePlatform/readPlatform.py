@@ -53,8 +53,10 @@ for child in root.findall('AS'):
 
 	if ("-l" in cmdArgs):
 		for link in child.iter('link'):
-			print "Link: ", link.get('id'), "; Bandwidth: ", link.get('bandwidth'), "; Latency: ", link.get('latency')
-			linkFile.write(link.get('id') + "," + link.get('bandwidth') + "," + link.get('latency') + '\n')
+			# print "Link: ", link.get('id'), "; Bandwidth: ", link.get('bandwidth'), "; Latency: ", link.get('latency')
+			# linkFile.write(link.get('id') + "," + link.get('bandwidth') + "," + link.get('latency') + '\n')
+			print "Link: ", link.get('id'), "; Bandwidth: ", link.get('bandwidth')
+			linkFile.write(link.get('id') + "," + link.get('bandwidth') + '\n')
 
 	
 	if ("-r" in cmdArgs):

@@ -32,15 +32,17 @@ server_link_prefix = "ServerAcessLink_"
 serverAS_link_prefix = "BBServer_"
 bb_link_prefix = "BB_"
 
-power = "1000000000"
-s_power = "10000000000"
-c_link_bw = "10000000"
-c_link_lat = "5E-4"
+power = "1E9"
+s_power = "1E10"
+c_link_bw = "1E7"
+# c_link_lat = "5E-4"
+c_link_lat = "0.002"
 # c_link_lat = "0.01"
-s_link_bw = "100000000"
-s_link_lat = "0.002"
-bb_link_bw = "10000000000"
-inner_bb_link_lat = "0.001"
+s_link_bw = "1E8"
+upper_s_link_bw = "1E9"
+super_bb_link_bw = "1E10"
+bb_link_bw = "8E8"
+inner_bb_link_bw = "1E8"
 # bb_link_lat = "0.01"
 bb_link_lat = "1E-5"
 
@@ -74,7 +76,7 @@ def createAS(n, P):
 			link = ET.SubElement(P, 'link')
 			link.set('id', link_prefix + as_num + str(i))
 			link.set('bandwidth', c_link_bw)
-			link.set('latency', c_link_lat)
+			# link.set('latency', c_link_lat)
 
 		# Creating a central router
 		router = ET.SubElement(P, 'router')
@@ -122,8 +124,11 @@ def createAS(n, P):
 		server.set('power', power)
 		server_link = ET.SubElement(serverAS, 'link')
 		server_link.set('id', server_link_prefix + upper_as_num)
-		server_link.set('bandwidth', s_link_bw)
-		server_link.set('latency', s_link_lat)
+		if n > 1:
+			server_link.set('bandwidth', upper_s_link_bw)
+		else:
+			server_link.set('bandwidth', s_link_bw)
+		# server_link.set('latency', s_link_lat)
 		server_router = ET.SubElement(serverAS, 'router')
 		server_router.set('id', server_router_prefix + upper_as_num)
 		server_route = ET.SubElement(serverAS, 'route')
@@ -137,18 +142,23 @@ def createAS(n, P):
 		bb_server_link = ET.SubElement(P, 'link')
 		bb_server_link.set('id', serverAS_link_prefix + upper_as_num)
 		bb_server_link.set('bandwidth', bb_link_bw)
-		bb_server_link.set('latency', inner_bb_link_lat)
+		# bb_server_link.set('latency', inner_bb_link_lat)
 
 		# Creating links to connect subASes to the router in exitAS
 		for i in range(d):
 			as_num = upper_as_num + str(i)
 			bb_AS_link = ET.SubElement(P, 'link')
 			bb_AS_link.set('id', bb_link_prefix + as_num)
-			bb_AS_link.set('bandwidth', bb_link_bw)
+			# bb_AS_link.set('bandwidth', bb_link_bw)
 			if n == 1:
-				bb_AS_link.set('latency', inner_bb_link_lat)
+				bb_AS_link.set('bandwidth', inner_bb_link_bw)
+			elif n == 2:
+				bb_AS_link.set('bandwidth', bb_link_bw)
 			else:
-				bb_AS_link.set('latency', bb_link_lat)
+				bb_AS_link.set('bandwidth', super_bb_link_bw)
+
+			# else:
+			#	bb_AS_link.set('latency', bb_link_lat)
 
 		# Creating routes to connect to serverAS
 		serverAS_route = ET.SubElement(P, 'ASroute')
