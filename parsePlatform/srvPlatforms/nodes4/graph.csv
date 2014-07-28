@@ -1,0 +1,14 @@
+SRouter_000,Server_000
+SRouter_001,Server_001
+SRouter_010,Server_010
+SRouter_011,Server_011
+SRouter_000,R_000
+SRouter_001,R_001
+R_000,R_00
+R_001,R_00
+SRouter_010,R_010
+SRouter_011,R_011
+R_010,R_01
+R_011,R_01
+R_00,R_0
+R_01,R_0

@@ -1,0 +1,14 @@
+SRouter_000,ServerAcessLink_000,Server_000
+SRouter_001,ServerAcessLink_001,Server_001
+SRouter_010,ServerAcessLink_010,Server_010
+SRouter_011,ServerAcessLink_011,Server_011
+SRouter_000,BBServer_000,R_000
+SRouter_001,BBServer_001,R_001
+R_000,BB_000,R_00
+R_001,BB_001,R_00
+SRouter_010,BBServer_010,R_010
+SRouter_011,BBServer_011,R_011
+R_010,BB_010,R_01
+R_011,BB_011,R_01
+R_00,BB_00,R_0
+R_01,BB_01,R_0
