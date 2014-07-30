@@ -122,7 +122,7 @@ def sortCandidate(client, serverList):
 	sortedServerMap = sorted(serverMap.items(), key=itemgetter(1), reverse=True)
 	return sortedServerMap
 
-candidateNum = 5
+candidateNum = 3
 for client in clients:
 	clientProc = ET.SubElement(platform, 'process')
 	clientProc.set('function', "agentMngt.clientAgent")

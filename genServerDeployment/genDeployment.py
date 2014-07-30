@@ -38,7 +38,7 @@ for idx, srv in enumerate(servers):
 	preIdx = (idx - 1) % N
 	nextIdx = (idx + 1) % N
 	curProc = ET.SubElement(platform, 'process')
-	curProc.set('function', "agentMngt.cacheAgent")
+	curProc.set('function', "agentDiscovery.cacheAgent")
 	curProc.set('host', srv)
 	
 	# Set predecessor first
@@ -50,6 +50,11 @@ for idx, srv in enumerate(servers):
 	nextSrv = servers[nextIdx]
 	argu = ET.SubElement(curProc, 'argument')
 	argu.set('value', nextSrv)
+	
+	# Set overlayID file
+	nextSrv = servers[nextIdx]
+	argu = ET.SubElement(curProc, 'argument')
+	argu.set('value', "overlayID.csv")
 
 # print ET.tostring(comment)
 # print prettify(platform)

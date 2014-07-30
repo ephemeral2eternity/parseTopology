@@ -19,8 +19,10 @@ else:
 	s = int(cmdArgs[2])
 	d = int(cmdArgs[3])
 
-
-ids = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N']
+ids = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
+        'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
+        'U', 'V', 'W', 'X', 'Y', 'Z']
 
 AS_prefix = "AS_"
 exitAS_prefix = "exitAS_"
@@ -37,16 +39,18 @@ bb_link_prefix = "BB_"
 power = "1E9"
 s_power = "1E10"
 c_link_bw = "1E7"
-s_link_bw = "5E7"
-# s_link_lat = "0.002"
+# c_link_lat = "5E-4"
+# c_link_lat = "0.002"
+# c_link_lat = "0.01"
+s_link_bw = "5E8"
 upper_s_link_bw = "1E9"
 super_bb_link_bw = "1E10"
 # bb_link_bw = "1E9"
-bb_link_bw = "5E7"
-# bb_link_bw = "250000000"
+# bb_link_bw = "8E8"
 # bb_link_bw = "5E8"
+bb_link_bw = "2E8"
 inner_bb_link_bw = "1E9"
-bb_link_lat = "0.002"
+# bb_link_lat = "0.01"
 # bb_link_lat = "1E-5"
 
 # Printing preamble
@@ -71,14 +75,14 @@ def createAS(n, P):
 		# Generating the client hosts in this AS.
 		for i in range(d):
 			host = ET.SubElement(P, 'host')
-			host.set('id', client_prefix + as_num + ids[i])
+			host.set('id', server_prefix + as_num + ids[i])
 			host.set('power', power)
 
 		# Generating the links connecting to hosts
 		for i in range(d):
 			link = ET.SubElement(P, 'link')
 			link.set('id', link_prefix + as_num + ids[i])
-			link.set('bandwidth', c_link_bw)
+			link.set('bandwidth', s_link_bw)
 			# link.set('latency', c_link_lat)
 
 		# Creating a central router
@@ -89,7 +93,7 @@ def createAS(n, P):
 		for i in range(d):
 			route = ET.SubElement(P, 'route')
 			route.set('src', router_prefix + as_num)
-			route.set('dst', client_prefix + as_num + ids[i])
+			route.set('dst', server_prefix + as_num + ids[i])
 			route.set('symmetrical', "YES")
 			link_ctn = ET.SubElement(route, 'link_ctn')
 			link_ctn.set('id', link_prefix + as_num + ids[i])
@@ -115,32 +119,7 @@ def createAS(n, P):
 			curAS = ET.SubElement(P, 'AS')
 			curAS.set('id', AS_prefix + as_num)
 			createAS(n-1, curAS)
-
-		# Creating a Server AS in this AS.
-		serverAS = ET.SubElement(P, 'AS')
-		serverAS.set('id', serverAS_prefix + upper_as_num)
-		serverAS.set('routing', "Full")
-
-		# Creating server, server router, server link in serverAS.
-		server = ET.SubElement(serverAS, 'host')
-		server.set('id', server_prefix + upper_as_num)
-		server.set('power', power)
-		server_link = ET.SubElement(serverAS, 'link')
-		server_link.set('id', server_link_prefix + upper_as_num)
-		if n > 1:
-			server_link.set('bandwidth', upper_s_link_bw)
-		else:
-			server_link.set('bandwidth', s_link_bw)
-		# server_link.set('latency', s_link_lat)
-		server_router = ET.SubElement(serverAS, 'router')
-		server_router.set('id', server_router_prefix + upper_as_num)
-		server_route = ET.SubElement(serverAS, 'route')
-		server_route.set('src', server_router_prefix + upper_as_num)
-		server_route.set('dst', server_prefix + upper_as_num)
-		server_route.set('symmetrical', "YES")
-		server_route_link_ctn = ET.SubElement(server_route, 'link_ctn')
-		server_route_link_ctn.set('id', server_link_prefix + upper_as_num)
-
+		
 		# Creating links to connect serverAS to the router in exitAS
 		bb_server_link = ET.SubElement(P, 'link')
 		bb_server_link.set('id', serverAS_link_prefix + upper_as_num)
@@ -157,22 +136,11 @@ def createAS(n, P):
 				bb_AS_link.set('bandwidth', inner_bb_link_bw)
 			elif n == 2:
 				bb_AS_link.set('bandwidth', bb_link_bw)
-				bb_AS_link.set('latency', bb_link_lat)
 			else:
 				bb_AS_link.set('bandwidth', super_bb_link_bw)
 
 			# else:
 			#	bb_AS_link.set('latency', bb_link_lat)
-
-		# Creating routes to connect to serverAS
-		serverAS_route = ET.SubElement(P, 'ASroute')
-		serverAS_route.set('src', serverAS_prefix + upper_as_num)
-		serverAS_route.set('dst', exitAS_prefix + upper_as_num)
-		serverAS_route.set('gw_src', server_router_prefix + upper_as_num)
-		serverAS_route.set('gw_dst', router_prefix + upper_as_num)
-		serverAS_route.set('symmetrical', "YES")
-		serverAS_route_link_ctn = ET.SubElement(serverAS_route, 'link_ctn')
-		serverAS_route_link_ctn.set('id', serverAS_link_prefix + upper_as_num)
 
 		# Creating routes to connect to sub ASes
 		for i in range(d):

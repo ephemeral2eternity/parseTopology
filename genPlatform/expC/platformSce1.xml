@@ -356,13 +356,13 @@
       </AS>
       <AS id="serverAS_00" routing="Full">
         <host id="Server_00" power="1E9"/>
-        <link bandwidth="5E8" id="ServerAcessLink_00" latency="0.002"/>
+        <link bandwidth="5E7" id="ServerAcessLink_00"/>
         <router id="SRouter_00"/>
         <route dst="Server_00" src="SRouter_00" symmetrical="YES">
           <link_ctn id="ServerAcessLink_00"/>
         </route>
       </AS>
-      <link bandwidth="5E8" id="BBServer_00"/>
+      <link bandwidth="250000000" id="BBServer_00"/>
       <link bandwidth="1E9" id="BB_000"/>
       <link bandwidth="1E9" id="BB_001"/>
       <link bandwidth="1E9" id="BB_002"/>
@@ -749,13 +749,13 @@
       </AS>
       <AS id="serverAS_01" routing="Full">
         <host id="Server_01" power="1E9"/>
-        <link bandwidth="5E8" id="ServerAcessLink_01" latency="0.002"/>
+        <link bandwidth="5E7" id="ServerAcessLink_01"/>
         <router id="SRouter_01"/>
         <route dst="Server_01" src="SRouter_01" symmetrical="YES">
           <link_ctn id="ServerAcessLink_01"/>
         </route>
       </AS>
-      <link bandwidth="5E8" id="BBServer_01"/>
+      <link bandwidth="250000000" id="BBServer_01"/>
       <link bandwidth="1E9" id="BB_010"/>
       <link bandwidth="1E9" id="BB_011"/>
       <link bandwidth="1E9" id="BB_012"/>
@@ -1142,13 +1142,13 @@
       </AS>
       <AS id="serverAS_02" routing="Full">
         <host id="Server_02" power="1E9"/>
-        <link bandwidth="5E8" id="ServerAcessLink_02" latency="0.002"/>
+        <link bandwidth="5E7" id="ServerAcessLink_02"/>
         <router id="SRouter_02"/>
         <route dst="Server_02" src="SRouter_02" symmetrical="YES">
           <link_ctn id="ServerAcessLink_02"/>
         </route>
       </AS>
-      <link bandwidth="5E8" id="BBServer_02"/>
+      <link bandwidth="250000000" id="BBServer_02"/>
       <link bandwidth="1E9" id="BB_020"/>
       <link bandwidth="1E9" id="BB_021"/>
       <link bandwidth="1E9" id="BB_022"/>
@@ -1535,13 +1535,13 @@
       </AS>
       <AS id="serverAS_03" routing="Full">
         <host id="Server_03" power="1E9"/>
-        <link bandwidth="5E8" id="ServerAcessLink_03" latency="0.002"/>
+        <link bandwidth="5E7" id="ServerAcessLink_03"/>
         <router id="SRouter_03"/>
         <route dst="Server_03" src="SRouter_03" symmetrical="YES">
           <link_ctn id="ServerAcessLink_03"/>
         </route>
       </AS>
-      <link bandwidth="5E8" id="BBServer_03"/>
+      <link bandwidth="250000000" id="BBServer_03"/>
       <link bandwidth="1E9" id="BB_030"/>
       <link bandwidth="1E9" id="BB_031"/>
       <link bandwidth="1E9" id="BB_032"/>
@@ -1928,13 +1928,13 @@
       </AS>
       <AS id="serverAS_04" routing="Full">
         <host id="Server_04" power="1E9"/>
-        <link bandwidth="5E8" id="ServerAcessLink_04" latency="0.002"/>
+        <link bandwidth="5E7" id="ServerAcessLink_04"/>
         <router id="SRouter_04"/>
         <route dst="Server_04" src="SRouter_04" symmetrical="YES">
           <link_ctn id="ServerAcessLink_04"/>
         </route>
       </AS>
-      <link bandwidth="5E8" id="BBServer_04"/>
+      <link bandwidth="250000000" id="BBServer_04"/>
       <link bandwidth="1E9" id="BB_040"/>
       <link bandwidth="1E9" id="BB_041"/>
       <link bandwidth="1E9" id="BB_042"/>
@@ -2321,13 +2321,13 @@
       </AS>
       <AS id="serverAS_05" routing="Full">
         <host id="Server_05" power="1E9"/>
-        <link bandwidth="5E8" id="ServerAcessLink_05" latency="0.002"/>
+        <link bandwidth="5E7" id="ServerAcessLink_05"/>
         <router id="SRouter_05"/>
         <route dst="Server_05" src="SRouter_05" symmetrical="YES">
           <link_ctn id="ServerAcessLink_05"/>
         </route>
       </AS>
-      <link bandwidth="5E8" id="BBServer_05"/>
+      <link bandwidth="250000000" id="BBServer_05"/>
       <link bandwidth="1E9" id="BB_050"/>
       <link bandwidth="1E9" id="BB_051"/>
       <link bandwidth="1E9" id="BB_052"/>
@@ -2714,13 +2714,13 @@
       </AS>
       <AS id="serverAS_06" routing="Full">
         <host id="Server_06" power="1E9"/>
-        <link bandwidth="5E8" id="ServerAcessLink_06" latency="0.002"/>
+        <link bandwidth="5E7" id="ServerAcessLink_06"/>
         <router id="SRouter_06"/>
         <route dst="Server_06" src="SRouter_06" symmetrical="YES">
           <link_ctn id="ServerAcessLink_06"/>
         </route>
       </AS>
-      <link bandwidth="5E8" id="BBServer_06"/>
+      <link bandwidth="250000000" id="BBServer_06"/>
       <link bandwidth="1E9" id="BB_060"/>
       <link bandwidth="1E9" id="BB_061"/>
       <link bandwidth="1E9" id="BB_062"/>
@@ -3107,13 +3107,13 @@
       </AS>
       <AS id="serverAS_07" routing="Full">
         <host id="Server_07" power="1E9"/>
-        <link bandwidth="5E8" id="ServerAcessLink_07" latency="0.002"/>
+        <link bandwidth="5E7" id="ServerAcessLink_07"/>
         <router id="SRouter_07"/>
         <route dst="Server_07" src="SRouter_07" symmetrical="YES">
           <link_ctn id="ServerAcessLink_07"/>
         </route>
       </AS>
-      <link bandwidth="5E8" id="BBServer_07"/>
+      <link bandwidth="250000000" id="BBServer_07"/>
       <link bandwidth="1E9" id="BB_070"/>
       <link bandwidth="1E9" id="BB_071"/>
       <link bandwidth="1E9" id="BB_072"/>
@@ -3152,21 +3152,21 @@
     </AS>
     <AS id="serverAS_0" routing="Full">
       <host id="Server_0" power="1E9"/>
-      <link bandwidth="1E9" id="ServerAcessLink_0" latency="0.002"/>
+      <link bandwidth="1E9" id="ServerAcessLink_0"/>
       <router id="SRouter_0"/>
       <route dst="Server_0" src="SRouter_0" symmetrical="YES">
         <link_ctn id="ServerAcessLink_0"/>
       </route>
     </AS>
-    <link bandwidth="5E8" id="BBServer_0"/>
-    <link bandwidth="5E8" id="BB_00" latency="0.001"/>
-    <link bandwidth="5E8" id="BB_01" latency="0.001"/>
-    <link bandwidth="5E8" id="BB_02" latency="0.001"/>
-    <link bandwidth="5E8" id="BB_03" latency="0.001"/>
-    <link bandwidth="5E8" id="BB_04" latency="0.001"/>
-    <link bandwidth="5E8" id="BB_05" latency="0.001"/>
-    <link bandwidth="5E8" id="BB_06" latency="0.001"/>
-    <link bandwidth="5E8" id="BB_07" latency="0.001"/>
+    <link bandwidth="250000000" id="BBServer_0"/>
+    <link bandwidth="250000000" id="BB_00" latency="0.002"/>
+    <link bandwidth="250000000" id="BB_01" latency="0.002"/>
+    <link bandwidth="250000000" id="BB_02" latency="0.002"/>
+    <link bandwidth="250000000" id="BB_03" latency="0.002"/>
+    <link bandwidth="250000000" id="BB_04" latency="0.002"/>
+    <link bandwidth="250000000" id="BB_05" latency="0.002"/>
+    <link bandwidth="250000000" id="BB_06" latency="0.002"/>
+    <link bandwidth="250000000" id="BB_07" latency="0.002"/>
     <ASroute dst="exitAS_0" gw_dst="R_0" gw_src="SRouter_0" src="serverAS_0" symmetrical="YES">
       <link_ctn id="BBServer_0"/>
     </ASroute>
