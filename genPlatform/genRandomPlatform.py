@@ -35,11 +35,12 @@ bb_link_prefix = "BB_"
 power = "1E9"
 s_power = "1E10"
 c_link_bw = "1E7"
-s_link_bw = "1E9"
+s_link_bw = "2E8"
 upper_s_link_bw = "1E9"
-super_bb_link_bw = "1E10"
+super_bb_link_bw = "1E9"
 bb_link_bw = "1E9"
 inner_bb_link_bw = "1E9"
+bb_link_lat = "0.002"
 
 # Printing preamble
 print "<?xml version='1.0'?>\n";
@@ -92,8 +93,6 @@ def createAS(l, s, e, P):
 		items = as_num_str.split('_')
 		upper_as_num = items[-1]
 		d = random.randint(s, e)
-		# if upper_as_num == "0":
-		#	branchNum = 1
 
 		# Setting current AS as Full routing since it is not leaf AS.
 		P.set('routing', "Floyd")
@@ -148,8 +147,9 @@ def createAS(l, s, e, P):
 			as_num = upper_as_num + ids[i]
 			bb_AS_link = ET.SubElement(P, 'link')
 			bb_AS_link.set('id', bb_link_prefix + as_num)
-			# bb_AS_link.set('bandwidth', bb_link_bw)
 			bb_AS_link.set('bandwidth', bb_link_bw)
+			if l > 1:
+				bb_AS_link.set('latency', bb_link_lat)
 
 			# else:
 			#	bb_AS_link.set('latency', bb_link_lat)
