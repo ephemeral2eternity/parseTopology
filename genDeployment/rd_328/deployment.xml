@@ -1,0 +1,242 @@
+<?xml version='1.0'?>
+<!DOCTYPE platform SYSTEM "http://simgrid.gforge.inria.fr/simgrid.dtd">
+
+<platform version="3">
+  <process function="agentMngt.cacheAgent" host="Server_00">
+    <argument value="Server_01"/>
+    <argument value="Server_0"/>
+  </process>
+  <process function="agentMngt.cacheAgent" host="Server_01">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+  </process>
+  <process function="agentMngt.cacheAgent" host="Server_0">
+    <argument value="Server_00"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0000">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0001">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0002">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0003">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0004">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0005">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0006">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0010">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0011">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0012">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0013">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0020">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0021">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0022">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0030">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0031">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0032">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0033">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0034">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0040">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0041">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0042">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0043">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0044">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0045">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0046">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0047">
+    <argument value="Server_00"/>
+    <argument value="Server_0"/>
+    <argument value="Server_01"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0100">
+    <argument value="Server_01"/>
+    <argument value="Server_0"/>
+    <argument value="Server_00"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0101">
+    <argument value="Server_01"/>
+    <argument value="Server_0"/>
+    <argument value="Server_00"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0102">
+    <argument value="Server_01"/>
+    <argument value="Server_0"/>
+    <argument value="Server_00"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0103">
+    <argument value="Server_01"/>
+    <argument value="Server_0"/>
+    <argument value="Server_00"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0104">
+    <argument value="Server_01"/>
+    <argument value="Server_0"/>
+    <argument value="Server_00"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0105">
+    <argument value="Server_01"/>
+    <argument value="Server_0"/>
+    <argument value="Server_00"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0106">
+    <argument value="Server_01"/>
+    <argument value="Server_0"/>
+    <argument value="Server_00"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0110">
+    <argument value="Server_01"/>
+    <argument value="Server_0"/>
+    <argument value="Server_00"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0111">
+    <argument value="Server_01"/>
+    <argument value="Server_0"/>
+    <argument value="Server_00"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0112">
+    <argument value="Server_01"/>
+    <argument value="Server_0"/>
+    <argument value="Server_00"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0113">
+    <argument value="Server_01"/>
+    <argument value="Server_0"/>
+    <argument value="Server_00"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0114">
+    <argument value="Server_01"/>
+    <argument value="Server_0"/>
+    <argument value="Server_00"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0115">
+    <argument value="Server_01"/>
+    <argument value="Server_0"/>
+    <argument value="Server_00"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0116">
+    <argument value="Server_01"/>
+    <argument value="Server_0"/>
+    <argument value="Server_00"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0120">
+    <argument value="Server_01"/>
+    <argument value="Server_0"/>
+    <argument value="Server_00"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0121">
+    <argument value="Server_01"/>
+    <argument value="Server_0"/>
+    <argument value="Server_00"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0122">
+    <argument value="Server_01"/>
+    <argument value="Server_0"/>
+    <argument value="Server_00"/>
+  </process>
+  <process function="agentMngt.clientAgent" host="Client_0123">
+    <argument value="Server_01"/>
+    <argument value="Server_0"/>
+    <argument value="Server_00"/>
+  </process>
+</platform>
